@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  namespace: cloudchamp
+  labels:
+    app: frontend
+    role: frontend
+    env: demo
+spec:
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 25%
+  selector:
+    matchLabels:
+      app: frontend
+      role: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+        role: frontend
+    spec:
+      containers:
+      - name: frontend
+        image: 167771397877.dkr.ecr.ap-south-1.amazonaws.com/tutorialui
+        imagePullPolicy: Always
+        env:
+          - name: REACT_APP_APIHOSTPORT
+            value: ae7e00d9d135045d5a59f43e86f7136f-1557971162.ap-south-1.elb.amazonaws.com  #add your API_Load_Balancer DNS manually here if app does not run
+          - name: REACT_APP_API_URL
+            value: ae898fcad7bad497c867ac17271b77df-97547257.ap-south-1.elb.amazonaws.com
+        ports:
+        - containerPort: 8081
