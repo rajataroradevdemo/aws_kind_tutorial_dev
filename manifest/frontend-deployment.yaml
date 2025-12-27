@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: frontend
-  namespace: cloudchamp
+  namespace: tutorial
   labels:
     app: frontend
     role: frontend
@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: 167771397877.dkr.ecr.ap-south-1.amazonaws.com/tutorialui
+        image: rajataroracw/tutorial_app_ui:1.0
         imagePullPolicy: Always
         env:
           - name: REACT_APP_APIHOSTPORT
