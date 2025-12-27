@@ -35,11 +35,11 @@ spec:
             valueFrom:
               secretKeyRef:
                 name: mongodb-secret
-                key: username
+                key: MONGO_INITDB_ROOT_USERNAME
           - name: MONGODB_PASSWORD
             valueFrom:
               secretKeyRef:
                 name: mongodb-secret
-                key: password
+                key: MONGO_INITDB_ROOT_PASSWORD
         ports:
         - containerPort: 5000
