@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tutorialapi
+  namespace: tutorial
+  labels:
+    app: tutorialapi
+    role: tutorialapi
+    env: dev
+spec:
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 25%
+  selector:
+    matchLabels:
+      app: tutorialapi
+      role: tutorialapi
+  template:
+    metadata:
+      labels:
+        app: tutorialapi
+        role: tutorialapi
+    spec:
+      containers:
+      - name: tutorialapi
+        image: rajataroracw/tutorial_app_api:1.0
+        imagePullPolicy: Always
+        env:
+          - name: MONGODB_HOST
+            value: mongodb
+          - name: MONGODB_USERNAME
+            valueFrom:
+              secretKeyRef:
+                name: mongodb-secret
+                key: username
+          - name: MONGODB_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: mongodb-secret
+                key: password
+        ports:
+        - containerPort: 5000
