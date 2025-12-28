@@ -1,0 +1,298 @@
+{
+	"info": {
+		"_postman_id": "8cb0e12c-a9d2-433f-b3bb-059fcde8ad41",
+		"name": "Localhost Tutorials",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET /tutorials",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://54.87.57.80:5000/tutorials",
+					"protocol": "http",
+					"host": [
+						"54",
+						"87",
+						"57",
+						"80"
+					],
+					"port": "5000",
+					"path": [
+						"tutorials"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/tutorials",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"tutorials"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "ut cupidatat ad occaecat",
+							"description": ""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{}"
+				}
+			]
+		},
+		{
+			"name": "GET /health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://54.87.57.80:5000/health",
+					"protocol": "http",
+					"host": [
+						"54",
+						"87",
+						"57",
+						"80"
+					],
+					"port": "5000",
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/tutorials",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"tutorials"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "ut cupidatat ad occaecat",
+							"description": ""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{}"
+				}
+			]
+		},
+		{
+			"name": "POST /tutorials",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\": \"New book on the magical adventure.\",\r\n    \"title\": \"Harry Potter\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://54.87.57.80:5000/tutorials",
+					"protocol": "http",
+					"host": [
+						"54",
+						"87",
+						"57",
+						"80"
+					],
+					"port": "5000",
+					"path": [
+						"tutorials"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/tutorials",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"tutorials"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "ut cupidatat ad occaecat",
+							"description": ""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{}"
+				}
+			]
+		},
+		{
+			"name": "GET /tutorials/{id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/tutorials/663e696aac167773febebe1e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"tutorials",
+						"663e696aac167773febebe1e"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/tutorials",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"tutorials"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "ut cupidatat ad occaecat",
+							"description": ""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{}"
+				}
+			]
+		},
+		{
+			"name": "PUT /tutorials",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\": \"ABC\",\r\n    \"title\": \"ABC\",\r\n    \"published\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/tutorials/663e696aac167773febebe1e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"tutorials",
+						"663e696aac167773febebe1e"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/tutorials",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"tutorials"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "ut cupidatat ad occaecat",
+							"description": ""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{}"
+				}
+			]
+		}
+	]
+}
