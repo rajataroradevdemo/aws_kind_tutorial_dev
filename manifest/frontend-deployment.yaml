@@ -30,8 +30,8 @@ spec:
         imagePullPolicy: Always
         env:
           - name: REACT_APP_APIHOSTPORT
-            value: 43.204.38.26  #add your API_Load_Balancer DNS manually here if app does not run
+            value: 98.130.84.148  #add your API_Load_Balancer DNS manually here if app does not run
           - name: REACT_APP_API_URL
-            value: 43.204.38.26
+            value: 98.130.84.148
         ports:
         - containerPort: 8081
